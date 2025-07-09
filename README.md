@@ -7,6 +7,15 @@ To design a system using a temperature sensor that reads and displays real-time 
 ---
 
 ### 🔌 **Components Required:**
+| Component                 | Quantity    | Purpose                          |
+| ------------------------- | ----------- | -------------------------------- |
+| Arduino UNO               | 1           | Main microcontroller             |
+| LM35 Temperature Sensor   | 1           | Measures surrounding temperature |
+| 16x2 LCD (optional)       | 1           | Displays temperature output      |
+| Potentiometer (10k)       | 1           | LCD contrast adjustment          |
+| Breadboard & Jumper Wires | As required | Circuit connections              |
+| USB Cable                 | 1           | Upload code + power              |
+
 
 * Arduino UNO (or any microcontroller)
 * LM35 or DHT11 Temperature Sensor
