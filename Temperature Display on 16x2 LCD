@@ -1,0 +1,25 @@
+#include <LiquidCrystal.h>
+
+// RS, EN, D4, D5, D6, D7
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+int tempPin = A0;
+float tempC;
+
+void setup() {
+  lcd.begin(16, 2);
+  lcd.print("Temp Monitoring");
+  delay(2000);
+}
+
+void loop() {
+  int reading = analogRead(tempPin);
+  tempC = (reading * 5.0 * 100.0) / 1024;
+  
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Temperature:");
+  lcd.setCursor(0, 1);
+  lcd.print(tempC);
+  lcd.print(" C");
+  delay(1000);
+}
